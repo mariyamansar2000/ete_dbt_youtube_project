@@ -1,4 +1,4 @@
 SELECT 
     * 
 FROM
-    {{source('source', 'dim_store')}}
+    {{ source('source', 'dim_store') }}
