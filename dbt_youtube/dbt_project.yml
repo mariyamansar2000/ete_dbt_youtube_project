@@ -23,23 +23,16 @@ clean-targets:         # directories to be removed by `dbt clean`
 
 models:
   dbt_youtube:
-
     bronze:
       +materialized: table
-      +schema: bronze
-    
+      schema: bronze
     silver:
       +materialized: table
-      +schema: silver
-    
+      schema: silver
     gold:
       +materialized: table
-      +schema: gold
+      schema: gold
 
 seeds:
   dbt_youtube:
     +schema: bronze
-
-tests:
-  dbt_youtube:
-    +schema: tests
