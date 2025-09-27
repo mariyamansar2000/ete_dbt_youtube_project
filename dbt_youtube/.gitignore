@@ -1,5 +1,17 @@
+# Ignore dbt profiles (contains tokens, passwords)
+profiles.yml
 
+# Ignore Databricks token files
+*.json
+*.token
+
+# Ignore environment files
+.env
+
+# Ignore VS Code settings
+.vscode/
+
+# Ignore compiled dbt outputs
 target/
 dbt_packages/
 logs/
-dbt_internal_packages/
