@@ -6,9 +6,12 @@ models:
       materialized: view
       schema: bronze
 
-  - name: bronze_products
+  - name: bronze_product
     config:
       materialized: view
+      schema: bronze
+
+  
       
   - name: bronze_sales
     columns:
@@ -18,7 +21,7 @@ models:
           - not_null
       - name: gross_amount
         data_tests:
-          - generic_nonnegative
+          - generic_non_negative
 
   - name: bronze_store
     columns:
@@ -33,6 +36,3 @@ models:
                 values: ['MegaMart Manhattan', 'MegaMart Brooklyn', 'MegaMart Austin', 'MegaMart San Jose', 'MegaMart Toronto']
               config:
                 severity: warn
-      
-
-
